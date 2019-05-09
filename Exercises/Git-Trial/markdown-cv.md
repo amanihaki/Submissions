@@ -13,7 +13,10 @@ Address: Lebanon-Bhamdoun.
 E-mail: Aman-haki94@gmail.com
 
 
+###Education:
 
+Terminal:
+(2018)
 
 
 
