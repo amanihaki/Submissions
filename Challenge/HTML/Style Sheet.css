@@ -1,0 +1,153 @@
+
+    
+     body{
+         margin: 0 auto;
+         background-color: #674141;
+         font-size: 15pt;
+         font-family: cursive;
+         
+     }
+ 
+     #ul1{
+         list-style: none;
+         top:300px;
+         position: absolute;
+         border: 1px solid pink;
+         padding: 7px 0px 7px 0px ;
+         background-color: rgb(247, 165, 242);
+         margin-left: 180px ; 
+         
+
+        
+     }
+     #ul1 li{
+         display: inline-block;
+         border-right: solid black 1px;
+         
+         
+       
+     }
+     #ul1 a:hover{
+         color: #d94271;
+         
+     }
+     
+     #ul1 a{
+         text-decoration: none;
+         color: black;
+         padding: 34px;
+         
+     }
+     
+ 
+     img{
+         
+         height: 300px;
+         width: 900px;
+         position: absolute;
+         left: 180px;
+         
+         }
+     #div1{
+         position: absolute;
+         top:400px;
+         left:200px;
+         
+         
+         
+         
+     }
+     #div2{
+         position: absolute;
+         top:400px;
+         left:450px;
+         width: 630px;
+         
+         
+         
+     }
+     
+     
+     #div3{
+         position: absolute;
+         top:800px;
+         left:180px;
+         width: 230px;
+         
+         
+     }
+     #div4{
+         position: absolute;
+         left: 450;
+         top: 710px;
+         width: 290px;
+         
+         
+         
+     }
+     
+     .button{
+         width: 90px;
+         height: 40px;
+         background-color: #b93e3e;
+         border-color: #b93e3e;
+         
+         
+     }
+     
+     
+     #div5{
+         position: absolute;
+        top:710px;
+        left:830px;
+         width: 290px;
+         border-left: solid 1px #b93e3e ;
+        
+         padding-left:18px;
+         height: 500px;
+         
+}  
+     
+     hr{
+         border: 1px solid #b93e3e;
+     } 
+     
+     #div6{
+        position: absolute;
+        top: 1250;
+         width: 100%;
+         text-align: center;
+         font-size: 25pt;
+         
+         
+     }
+     #div6 a{
+         color: black;
+     }
+     #div7{
+          position: absolute;
+          top:1300px;
+          text-align: center;
+           left:100px;
+
+
+
+     }
+     .input {
+      width: 200px;
+      height: 30px;
+      background-color: rgb(247, 165, 242);
+ }
+ 
+ #dive{
+
+    position: absolute;
+    top: 60px;
+    left: 300px;
+
+ }
+ #text{
+      width: 200px;
+      height:50px ;
+      background-color: rgb(247, 165, 242);
+ }

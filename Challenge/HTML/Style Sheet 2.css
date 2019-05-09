@@ -1,0 +1,18 @@
+body{
+   background-color: antiquewhite;
+    font-size: 20pt;
+}
+
+#img2{
+   width:400;
+   height: 300px;
+    
+}
+
+#ul1 li{
+    display: inline-block;
+    padding: 10px;
+}
+#img3{
+    height: 300px;
+}
