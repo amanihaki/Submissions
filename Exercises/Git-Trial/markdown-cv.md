@@ -18,7 +18,7 @@ E-mail: Aman-haki94@gmail.com
 Terminal:
 (2018)
 
-
+![](flower.jpg)
 
 ###Skills & Languages
 HTML & CSS
