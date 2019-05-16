@@ -83,13 +83,13 @@ a{
 width: 75%;
 margin: auto;
 display: grid;
-/*grid-template-columns: br br ;*/
+grid-template-columns: br br ;
 grid-template-rows: br br br br ;
 grid-template-areas: 
 /*"  zz"*/
- "ab co"
- "ex ed"
- "bo bo";
+ "ab co "
+ "ex ed "
+ "bo bo ";
 } 
 
 #about{
@@ -98,6 +98,7 @@ grid-template-areas:
 } 
 #competencies{
 grid-area: co;
+
 } 
 #experiences{
 
@@ -131,8 +132,11 @@ h3:before{
     border-radius: 10px ;
 
 }
+#experience-details{
+    padding-top:4px;
+}
 p{
-    padding: 4px;
+    padding: 5px;
 } 
 h4 .experience-type{ 
     color: red;
@@ -222,9 +226,7 @@ background-color:gray;
    border-bottom: 3px solid rgb(170, 159, 159);
    border-left: 3px solid rgb(170, 159, 159);
  } 
- #competencies{
-     margin-right: -10px;
- } 
+ 
  #education h3{
      border-bottom: 1px solid rgb(170, 159, 159); 
  } 
@@ -263,8 +265,12 @@ background-color:gray;
     
     
 }    
-
-
+.experience-location:before{
+    content: "In";
+}
+.experience-institution:before{
+    content:"@";
+}
 
 
 @media (max-width:600px){

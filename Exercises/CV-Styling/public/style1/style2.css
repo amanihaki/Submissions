@@ -1,0 +1,453 @@
+
+h1{ 
+  position: absolute;
+  top: 95px;
+  left: 170px;
+ 
+
+}
+
+
+h2{
+    visibility: hidden;;
+}  
+img{
+    margin-left: 750px;
+    top: 200px;
+    height: 170px;
+   transform: rotate(-25deg);
+ 
+}
+#about h3{
+    visibility: hidden;
+} 
+#competencies h3{
+    top:29px;
+    
+}
+#about p{
+    
+    margin-top: -110px;
+    padding-top: 15px;
+    opacity: 0.5;
+    width: 600px;
+    border-top:1px solid rgb(187, 182, 182);
+}
+.content{ 
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: br br br br ;
+    grid-template-areas: 
+     "ab "
+     "co "
+     "ex "
+     "ed"
+     "bo";
+    } 
+    
+    #about{
+     grid-area: ab;
+    
+    } 
+    #competencies{
+    grid-area: co;
+    
+    } 
+    #experiences{
+    
+        grid-area:ex;
+       
+      } 
+    #education{
+    grid-area: ed;
+    }
+     
+    #hobbies{
+    grid-area: bo;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    } 
+    #contact{
+        visibility: hidden;
+    } 
+    .skills-primary{ 
+          display: flex;
+          float: inline-end;
+          margin-left:150px;
+          margin-top: -29px;
+          
+          
+    } 
+    .skills-secondary{
+        display: flex;
+        float: inline-end;
+        margin-left:150px;
+        margin-top: 10px;
+        font-size: 13px;
+    } 
+    .skills-secondary::before{
+        border: red solid 1px;
+    }
+    #competencies{
+        margin-top:95px;
+       
+    }   
+  
+
+     .skill[data-skill="9"]{
+       width:130px;
+       background-color:  rgb(100, 121, 216);
+       border-right: 7px solid white;
+       margin-top:-6px;
+       margin-left:-8px;
+       margin-right: -4px;
+       padding-left:9px;
+       padding-top:9px;
+
+     } 
+     .skill[data-skill="7"]{
+        width:128px;
+        background-color:  rgb(100, 121, 216);
+        border-left: 7px solid white;
+        margin-top:-6px;
+        margin-left:-4px;
+        padding-left:9px;
+        padding-top:9px;
+ 
+      } 
+     .skill[data-skill="5"]{
+        width:128px;
+        background-color:  rgb(100, 121, 216);
+        border-right: 10px  rgb(100, 121, 216) solid;
+        border-left: 6px solid white;
+        margin-top:-6px;
+        margin-left:-14px;
+        margin-right:-8px;
+        padding-left:9px;
+        padding-top:9px;
+        
+      } 
+     
+     .skills-secondary{
+        background: white;
+        width:400px;
+         height: 25px;
+         margin-right:10px;
+         padding-left: 8px;
+         padding-top: 8px;
+         
+     }
+     
+     
+     .skill[data-skill="3"]{
+        
+        background:  rgb(100, 121, 216);
+       width:146px;
+       margin-top:-6px;
+       border-right: 2px solid   rgb(100, 121, 216);
+       padding-left:9px;
+       padding-top:9px;
+       margin-left:15px
+    } 
+
+       .skills-primary{
+        background-color:white;
+        width:400px;
+         height: 40px;
+         margin-right:10px;
+         padding-left: 8px;
+         padding-top: 8px;
+        
+      /* padding-top:9px;
+       /* height: 35px;*/
+      /* margin-left:16px;
+       margin-right:5px;
+       /*padding-left: 8px;
+       padding-top: 12px;*/
+     } 
+     .skill[data-skill="1"]{
+        margin-top:-6px;
+        background: rgb(100, 121, 216);
+       width:150px;
+       border-left: 5px solid white;
+       padding-left:9px;
+       padding-top:14px;
+       margin-left: 3px;
+       content: "\2605";
+       /* height: 35px;
+       
+        padding-left: 8px;
+        padding-top: 12px;*/
+     } 
+/*
+     .skill > span:after{
+         content: "\2605";
+     }
+*/
+.skill[data-skill="1"]::after{
+content:"\2605";
+color: white;
+padding-left:20px;
+} 
+.skill[data-skill="5"]::after{
+    content:"\2605";
+     position: absolute;
+    color: white;
+    padding-left:10px;
+    left:400px
+    }
+    
+    .skill[data-skill="9"]::after{
+        content:"\2605";
+        color: white;
+        padding-left:10px;
+        }.skill[data-skill="3"]::after{
+            content:"\2605";
+            color: white;
+            padding-left:10px;
+            }.skill[data-skill="7"]::after{
+                content:"\2605";
+                color: white;
+                padding-left:10px;
+                } 
+
+
+  
+
+    .experience{
+        margin-left: 150px;
+        /*border-left:2px solid black;*/
+    } 
+    .experience-details{
+        margin-left: 670px;
+        opacity: 0.6;
+    }
+
+     .experience-institution{
+         visibility: hidden;
+     } 
+     .experience-type{
+       color:rgb(100, 121, 216);
+
+     } 
+     #hobbies ul{
+         margin-left: 150px;
+     /* border-left:2px solid black;*/
+     } 
+     /*#competencies:before{
+        border-left:2px solid black;
+     } */h3{
+         font-style: italic;
+     }  
+      
+     #hobbies::before{
+        content: url(phone.png);
+    left: 500px;
+    position: absolute;
+    top: 1400px;
+
+   
+    }
+    #hobbies::after{
+    
+       content: url(email.png);
+        margin-left: 200px;
+    }
+        
+  #education::after{
+    content: url(github.png);
+    left: 630px;
+    position: absolute;
+    top: 1400px;
+
+   }
+   #experiences::after{
+    content: url(facebook.png);
+   left: 750px;
+    position: absolute;
+   top: 1400px;
+    
+   }
+  
+  @media(max-width:600px){
+
+  
+
+  h1{ 
+    position: absolute;
+    top: 40px;
+    left: 20px;
+   
+  
+  }
+  #about p{
+    
+    margin-top: -200px;
+    padding-top: 15px;
+    opacity: 0.5;
+    width: 100px;
+    border-top:1px solid rgb(187, 182, 182);
+}
+#competencies h3{
+    position: absolute;
+    top:300px;
+     left: 20px;
+    border-bottom:2px solid black;
+    
+}
+
+
+ h2{
+    visibility: hidden;
+}  
+img{
+
+ visibility: hidden;
+}
+
+#about p{
+    margin-left:-100px;
+    margin-top: -180px;
+    padding-top: 15px;
+    opacity: 0.5;
+    width: 500px;
+    border-top:1px solid rgb(187, 182, 182);
+}
+.content{ 
+    width: 55%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: br br br br ;
+    grid-template-areas: 
+     "ab "
+     "co "
+     "ex "
+     "ed"
+     "bo";
+    } 
+    
+    #about{
+     grid-area: ab;
+    
+    } 
+    #competencies{
+    grid-area: co;
+    
+    } 
+    #experiences{
+    
+        grid-area:ex;
+       
+      } 
+    #education{
+    grid-area: ed;
+    }
+     
+    #hobbies{
+    grid-area: bo;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    } 
+    
+    .skills-primary{ 
+          display: flex;
+          float: inline-end;
+          margin-left:-100px;
+          margin-top: 30px;
+          
+          
+    } 
+    .skills-secondary{
+        display: flex;
+        float: inline-end;
+        margin-left:-100px;
+        margin-top: 10px;
+        font-size: 13px;
+    } 
+    .skills-secondary::before{
+        border: red solid 1px;
+    }
+   /* #competencies{
+        margin-top:100px;}
+*/
+
+/*#experiences h3{
+    border-bottom: black solid 2px;
+    
+}*/
+
+
+  
+#experiences {
+    margin-left: -100px;
+    margin-top: 100px;
+} 
+.experience{
+    margin-left:4px;
+}
+
+.experience-details{
+    margin-left: 350px;
+    opacity: 0.6;
+}
+
+
+ .experience-type{
+   color:rgb(100, 121, 216);
+
+ } 
+ #hobbies {
+     display: none;
+    }
+    #education{
+      margin-left:-100px;  
+      margin-top: 80px;
+    }
+    /*
+    #hobbies::after{
+        display: none;
+    } 
+    #hobbies::before{
+        display: none;
+    } 
+    #education::after{
+        display: none;
+    }
+    #experiences::after{
+        display: none;
+    }*/
+    h3{
+        border-bottom: 2px solid black;
+    } 
+    #hobbies::before{
+        content: url(phone.png);
+    left: 500px;
+    position: absolute;
+    top: 1400px;
+
+    display: none;
+    }
+    #hobbies::after{
+    
+       content: url(email.png);
+        margin-left: 200px;
+        display: none;
+    }
+        
+  #education::after{
+    content: url(github.png);
+    left: 630px;
+    position: absolute;
+    top: 1400px;
+    display: none;
+   }
+   #experiences::after{
+    content: url(facebook.png);
+   left: 750px;
+    position: absolute;
+   top: 1400px;
+   display: none;
+    
+   }
+ }
