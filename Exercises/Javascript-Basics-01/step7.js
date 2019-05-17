@@ -1,7 +1,7 @@
-var size  = prompt("enter your Shoe size ");
-var birth = prompt("Enter your birth");
+var size  = parseInt(prompt("enter your Shoe size "));
+var birth = parseInt(prompt("Enter your birth"));
 
-var re= size*2
+var re= size*2 
 re+=5
 re*=50
 re-=birth
