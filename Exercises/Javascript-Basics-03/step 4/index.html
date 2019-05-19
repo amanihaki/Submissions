@@ -8,8 +8,22 @@
   <form>
     <label for="password">password : </label><input type="text" name="password" value="" id="password" />
     <label for="confirmation">Confirm : </label><input type="text" name="confirmation" value="" id="confirmation" />
-    <button type="button" name="button"  >Test</button>
+    <button onclick="myFunction();" type="button" name="button"  >Test</button>
   </form> 
+
+<script> 
+  function myFunction(){
+
+    var a = document.getElementById("password").value;
+    var b = document.getElementById("confirmation").value;
+    if(a=="", b==""){
+      document.getElementById("password").style.border = "red solid 1px";
+      document.getElementById("confirmation").style.border = "red solid 1px";
+    }
+  } 
+  
+  
+  </script>
   
 </body>
 </html>
