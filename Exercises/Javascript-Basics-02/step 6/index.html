@@ -5,28 +5,39 @@
     <title>Step 6</title>
   </head>
   <body>
-      <img onmouseover="change();" onmouseout="change2();" src="images/image1.jpg" id="image1" />
-      <img onmouseover="change();" onmouseout="change2();" src="images/image2.jpg" id="image2" />
-      <img onmouseover="change();" onmouseout="change2();" src="images/image3.jpg" id="image3" />
-      <img onmouseover="change();" onmouseout="change2();" src="images/image4.jpg" id="image4" />
-      <img onmouseover="change();" onmouseout="change2();" src="images/image5.jpg" id="image5" />
+      <img onmouseover="change(1);" onmouseout="change2(1);" src="images/image1.jpg" id="image1" />
+      <img onmouseover="change(2);" onmouseout="change2(2);" src="images/image2.jpg" id="image2" />
+      <img onmouseover="change(3);" onmouseout="change2(3);" src="images/image3.jpg" id="image3" />
+      <img onmouseover="change(4);" onmouseout="change2(4);" src="images/image4.jpg" id="image4" />
+      <img onmouseover="change(5);" onmouseout="change2(5);" src="images/image5.jpg" id="image5" />
       <script>
-          function change(){
+          function change(x){
             
               
-            document.getElementById("image1").src = "images/image1_2.jpg";
-            document.getElementById("image2").src = "images/image2_2.jpg";
-            document.getElementById("image3").src = "images/image3_2.jpg"; 
-            document.getElementById("image4").src = "images/image4_2.jpg";
-            document.getElementById("image5").src = "images/image5_2.jpg";
+            if (x == 1) {
+        document.getElementById("image1").src = "images/image2.jpg";
+      } else if (x == 2) {
+        document.getElementById("image2").src = "images/image3.jpg";
+      } else if (x == 3) {
+        document.getElementById("image3").src = "images/image4.jpg";
+      } else if (x == 4) {
+        document.getElementById("image4").src = "images/image5.jpg";
+      } else if (x == 5) {
+        document.getElementById("image5").src = "images/image1.jpg";
+      }
               }
-           function change2(){
-                 
+           function change2(x){
+            if (x == 1) {    
             document.getElementById("image1").src = "images/image1.jpg";
-            document.getElementById("image2").src = "images/image2.jpg";
-            document.getElementById("image3").src = "images/image3.jpg"; 
-            document.getElementById("image4").src = "images/image4.jpg";
-            document.getElementById("image5").src = "images/image5.jpg";
+      } else if (x == 2) {
+        document.getElementById("image2").src = "images/image2.jpg";
+      } else if (x == 3) {
+        document.getElementById("image3").src = "images/image3.jpg";
+      } else if (x == 4) {
+        document.getElementById("image4").src = "images/image4.jpg";
+      } else if (x == 5) {
+        document.getElementById("image5").src = "images/image5.jpg";
+      }
            }
       
         </script>
