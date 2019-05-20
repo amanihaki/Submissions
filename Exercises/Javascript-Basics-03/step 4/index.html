@@ -16,7 +16,7 @@
 
     var a = document.getElementById("password").value;
     var b = document.getElementById("confirmation").value;
-    if(a=="", b==""){
+    if(a != b){
       document.getElementById("password").style.border = "red solid 1px";
       document.getElementById("confirmation").style.border = "red solid 1px";
     }
