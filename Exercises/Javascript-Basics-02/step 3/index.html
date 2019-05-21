@@ -6,14 +6,19 @@
 </head>
 <body>
   <form>
-    <label for="name">Your name  : </label><input onchange="change();"  type="text" name="name" value="" id="name"/>
+    <label for="name">Your name  : </label><input oninput="function lol();"  type="text" name="name" value="" id="name"/>
   </form> 
-  <div  id="div1" ></div>
+  
 
   <script>
-     function change() {
-        var x = document.getElementById("name").value;
-       document.getElementById("div1").innerHTML = x;
+     var x = document.createElement('div');
+     var z = document.querySelector('body');
+     var v = document.querySelector('script');
+     //x.div = 'div11';
+     z.insertBefore(x,v);
+     var a = document.getElementById('name');
+     a.onkeyup = function lol(){
+       x.innerHTML = a.value;
      }
   
   
