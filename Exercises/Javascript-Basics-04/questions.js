@@ -108,9 +108,9 @@ const replaceElement = (languages) => {
 }
 
 const addElement = (languages) => {
-    var Array =["Html", "CSS", "Javascript", "PHP"];
-    Array.push("Ruby", "Python")
-    return Array;
+    //var Array =["Html", "CSS", "Javascript", "PHP"];
+    languages.push("Ruby", "Python")
+    return languages;
 }
 
 const addNumberElement = (numbers) => {
