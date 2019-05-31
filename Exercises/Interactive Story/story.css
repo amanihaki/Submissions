@@ -1,0 +1,41 @@
+body{
+background-image: url(star.jpg);
+
+
+
+}
+img{
+
+width: 500px;
+opacity: 0.6;
+}
+
+
+
+
+h1{
+   font-size: 50px;
+   font-style: italic;
+   font-weight: 100;
+   color: wheat;
+   text-shadow: 2px 2px black;
+   
+
+
+
+} 
+div{
+    width: 510px;
+    color: wheat;
+    font-size: 25px;
+    
+}
+button{
+
+width:150px;
+height: 30px;
+font-size: 20px;
+} 
+button:hover{
+    background-color: rgb(112, 112, 214);
+}
