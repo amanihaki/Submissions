@@ -1,0 +1,140 @@
+    *** Basic Queries ***
+ 
+ 
+ The number of the question :1 
+The query answer : SELECT name FROM students
+The result of the query :
+Alex
+Basma
+Hasan
+Jana
+Layal
+Robert 
+ 
+ 
+ The number of the question : 2
+The query answer : select * from students where age>30
+The result of the query :
+5	Robert	34	M	500
+6	Jana	33	F	500
+
+ 
+ The number of the question :3
+The query answer :SELECT Name from students where GENDER='F' And Age=30
+The result of the query : 
+SELECT Name from students where Gender = 'F' And Age = 30
+-- Result: 0 rows returned in 3ms
+ 
+  
+  The number of the question: 4
+The query answer : SELECT Points  from students where Name='Alex'
+The result of the query : 200
+
+
+  The number of the question : 5
+The query answer :
+INSERT INTO Students (Name,Age,Gender,Points) Values ('Amani',24,'F',250)
+The result of the query : query executed successfully. Took 1ms, 1 rows affected
+
+ The number of the question : 6
+The query answer : UPDATE Students SET points=400 WHERE Name='Basma'
+The result of the query : UPDATE Students SET points=400 WHERE Name='Basma'
+-- Result: query executed successfully. Took 0ms, 1 rows affected 
+
+ The number of the question : 7
+The query answer :UPDATE Students SET points=100  WHERE Name='Alex'
+The result of the query :query executed successfully. Took 0ms, 1 rows affected
+
+-------------------------------------------------------------------------------
+
+
+    *** Creating Table ***
+
+  The number of the question: 1
+The query answer :INSERT INTO layalgratuate (Name, Age, Gender,Points) SELECT Name, Age, Gender, Points FROM students
+ WHERE ID = 4
+
+The result of the query :
+-- At line 1:
+INSERT INTO layalgratuate (Name, Age, Gender,Points) SELECT Name, Age, Gender, Points FROM students
+ WHERE ID = 4
+-- Result: query executed successfully. Took 0ms, 0 rows affected
+ 
+ 
+  The number of the question:2
+The query answer: UPDATE layalgratuate SET Graduation = '08/09/2018'
+The result of the query:  query executed successfully. Took 0ms, 1 rows affected
+
+
+  The number of the question: 3
+The query answer : DELETE FROM students WHERE ID = 4
+The result of the query :  query executed successfully. Took 0ms, 1 rows affected
+---------------------------------------------------------------------------------
+ 
+    ***Join***
+    
+ 
+  The number of the question : 1
+The query answer : 
+SELECT employees.Name, employees.company, companies.date
+FROM employees
+INNER JOIN companies ON employees.COMPANY=companies.NAME;
+The result of the query : 
+Marc	Google	1998
+Maria	Google	1998
+Alaa	Facebook	2004
+Hala	Snapchat	2011 
+
+ The number of the question : 2
+The query answer : 
+SELECT employees.Name, employees.company, companies.date
+FROM employees
+INNER JOIN companies ON employees.COMPANY=companies.NAME
+WHERE COMPANIES.Date<2000;
+The result of the query :
+Marc	Google	1998
+Maria	Google	1998 
+
+ The number of the question: 3
+The query answer :
+SELECT company
+FROM employees
+WHERE ROLE='Graphic Designer';
+The result of the query : Snapchat
+--------------------------------------------
+
+      ***Filter & count ***
+      
+  
+ The number of the question : 1
+The query answer: select name ,max(points) from students;
+The result of the query : Robert	500
+
+
+ The number of the question : 2
+The query answer : select avg(points) from students;
+The result of the query :321.428571428571 
+
+ The number of the question : 3
+The query answer :select count(name) from students where points=500;
+The result of the query: 2
+
+  The number of the question : 4
+The query answer : select name from students Where name like '%S%';
+The result of the query :
+Basma
+Hasan 
+
+ The number of the question : 5
+The query answer :SELECT NAME,POINTS FROM STUDENTS
+ORDER BY POINTS DESC; 
+The result of the query: Robert	500
+Jana	500
+Basma	400
+Layal	350
+Amani	250
+Hasan	150
+Alex	100
+
+
+
