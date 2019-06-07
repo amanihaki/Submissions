@@ -83,7 +83,10 @@ function quit(){
 }
 
 
-
+///////////////////////////
+// list all possible commands exists in code below.
+// will list hello & quit .
+///////////////////////////
 function help(){
   console.log("-- hello [welcome message]");
   console.log("-- quit OR exit [exit from app]");
