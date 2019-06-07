@@ -34,14 +34,14 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  console.log(text.trim().replace('/n','!'));
-  if (text === 'quit\n' || text === "exit\n" ) {
+  console.log(text.trim()+ '!')
+ if (text === 'quit\n' || text === 'exit\n' ) {
     quit();
   }
   else if(text === 'hello\n'){
     hello();
   }
-  else if(text === "help\n")
+  else if(text === 'help\n')
   {
     help();
   }
