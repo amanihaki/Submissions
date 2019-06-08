@@ -45,6 +45,10 @@ function onDataReceived(text) {
   {
     help();
   }
+  else if(text === 'list\n')
+  {
+    list();
+  }
   
   else{
     tex(text);
@@ -87,7 +91,10 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
-
+function list(){
+  console.log("1.hello\n" + "2.help\n" + "3.exit or quit\n")
+  
+}
 
 ///////////////////////////
 // list all possible commands exists in code below.
