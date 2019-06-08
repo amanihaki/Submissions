@@ -34,7 +34,7 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  console.log(text.trim()+ '!')
+ 
  if (text === 'quit\n' || text === 'exit\n' ) {
     quit();
   }
@@ -45,9 +45,10 @@ function onDataReceived(text) {
   {
     help();
   }
-  // else{
-  //   unknownCommand(text);
-  // }
+  
+  else{
+    tex(text);
+  }
 }
 
 
@@ -69,10 +70,13 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(text){
+  console.log('hello' + "!" .trim());
+  
+}
+function tex(text){
   console.log(text);
   
 }
-
 
 /**
  * Exits the application
@@ -90,8 +94,8 @@ function quit(){
 // will list hello & quit .
 ///////////////////////////
 function help(){
-  console.log("-- hello [welcome message]");
-  console.log("-- quit OR exit [exit from app]");
+  console.log("-- hello [welcome message]" + "!".trim());
+  console.log("-- quit OR exit [exit from app]"+ "!".trim());
 }
 
 // The following line starts the application
