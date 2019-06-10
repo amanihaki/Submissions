@@ -36,7 +36,8 @@ function startApp(name){
 
 function onDataReceived(text) {
   var l = text.length;
- if (text === 'quit\n' || text === 'exit\n' ) {
+  var input = text.split(" ");
+ if (text === 'quit\n' || text === 'exit\n' ){
     quit();
   }
   else if(text === 'hello\n'){
@@ -57,10 +58,10 @@ function onDataReceived(text) {
   }
   else if (text.trim().slice(0,6) === 'remove') {
     remove(text);
+  }
 
- // else{
-  //  tex(text);"add" + text
- // }
+else if(input[0] === 'edit' || text === 'edit\n'){
+  edit(input, text);
 }
 }
 
@@ -129,7 +130,9 @@ function add(text,length){
 /*
 *Remove
 */
-var s = ['hello\n','help\n','exit or quit\n' ];
+var s = ['hello\n','help\n','exit or quit\n'];
+
+
 function remove(n){
   var number = n.charAt(7);
   if( n=='remove\n'){
@@ -144,6 +147,32 @@ function remove(n){
     break;
   }}
 }
+/*
+*edit
+*/
+function edit(input,text){
+  if(text === 'edit\n'){
+    console.log('error')
+  }
+ else if(isNaN(parseInt(input[1]))){
+   input.shift();
+ s.splice(s.length-1,1,input.join(" "))
+
+}
+else{
+
+  var whichTaskToEdit = input[1];
+
+  input.shift();
+  input.shift();
+
+  s.splice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
+}
+
+}
+
+
+
 ///////////////////////////
 // list all possible commands exists in code below.
 // will list hello & quit .
