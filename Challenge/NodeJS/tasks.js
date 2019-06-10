@@ -33,8 +33,9 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+
 function onDataReceived(text) {
- 
+  var l = text.length;
  if (text === 'quit\n' || text === 'exit\n' ) {
     quit();
   }
@@ -50,11 +51,18 @@ function onDataReceived(text) {
     list();
   }
   
-  else{
-    tex(text);
+   else if(text.trim().slice(0,3) === 'add')
+  {
+    add(text,l);
   }
-}
+  else if (text.trim().slice(0,6) === 'remove') {
+    remove(text);
 
+ // else{
+  //  tex(text);"add" + text
+ // }
+}
+}
 
 /**
  * prints "unknown command"
@@ -91,11 +99,51 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+
+
+/*
+*List
+*
+*/
+
 function list(){
-  console.log("1.hello\n" + "2.help\n" + "3.exit or quit\n")
+  
+  for(i=0; i<s.length;i++){
+  console.log((i+1)+'.'+s[i])
   
 }
+}
+/*
+*ADD*/
+function add(text,length){
+   
+  if(length>5){
+    s.push(text.trim().substring(4,length))
+  
+  }
+  else{
+    console.log('error')
+  }
+}
 
+/*
+*Remove
+*/
+var s = ['hello\n','help\n','exit or quit\n' ];
+function remove(n){
+  var number = n.charAt(7);
+  if( n=='remove\n'){
+    s.splice(s.length-1,1)
+  }
+  else if(number>s.length){
+    console.log('Please enter the right number of task to remove');
+  }
+  else{
+  for (number;number<s.length+1;number++){
+    s.splice(number-1,1)
+    break;
+  }}
+}
 ///////////////////////////
 // list all possible commands exists in code below.
 // will list hello & quit .
