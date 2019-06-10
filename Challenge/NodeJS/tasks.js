@@ -132,6 +132,21 @@ function add(text,length){
 */
 var s = ['hello\n','help\n','exit or quit\n'];
 
+var objet = [{
+
+
+   task1:'Hello',
+    done : true},
+    
+  {task2: 'help',
+  done : false
+
+ },
+
+  {task3: 'exit',
+  done: true
+
+},]
 
 function remove(n){
   var number = n.charAt(7);
