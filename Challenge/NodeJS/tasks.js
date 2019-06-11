@@ -9,7 +9,30 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(name){
+// var path;
+//     if(process.argv[2]){
+//          path = process.argv[2];
+//     }
+//     else{
+//          path = 'database.json';
+//     }
+  var fs=require('fs');
+
+
+  //  save data when i type exit or quit.
+const storeData = (data, path) => {
+  try {
+    fs.writeFileSync(path, JSON.stringify(data))
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+  function startApp(name){
+  // if(!fs.existsSync(path)){
+  //   storeData(task,path);
+  //   }
+  //   task= JSON.parse(loading(path));
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
@@ -107,8 +130,10 @@ function tex(text){
  * @returns {void}
  */
 function quit(){
+  storeData(objects, 'database.json');
   console.log('Quitting now, goodbye!')
   process.exit();
+
 }
 
 
@@ -243,55 +268,6 @@ function check(text,input){
              list2(text) ;
          }}}
 
-//    var whichTaskToEdit = input[1];
- 
-// function check(text,input){
-//   if(text === 'check\n'){
-//     console.log('error')
-//   }  
-//   else if(input[0]==='check' && !isNaN(input[1])){
-//        if(object[input[1]-1].done== false){
-//            object[input[1]-1].done= true
-//            object(text);
-//      }}
-//  else{
- 
-//    var whichTaskToEdit = input[1];
- 
-//    input.shift();
-// function check(text,input){
-//   if(text === 'check\n'){
-//     console.log('error')
-//   }  
-//   else if(input[0]==='check' && !isNaN(input[1])){
-//        if(object[input[1]-1].done== false){
-//            object[input[1]-1].done= true
-//            object(text);
-//      }}
-//  else{
- 
-//    var whichTaskToEdit = input[1];
- 
-//    input.shift();
-//    input.shift();
- 
-//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
-//  }
- 
-//    input.shift();
- 
-//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
-//  }
- 
-//    input.shift();
-//    input.shift();
- 
-//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
-//  }
-// }
-
-
-
 ///////////////////////////
 // list all possible commands exists in code below.
 // will list hello & quit .
@@ -299,6 +275,8 @@ function check(text,input){
 function help(){
   console.log("-- hello [welcome message]" + "!".trim());
   console.log("-- quit OR exit [exit from app]"+ "!".trim());
+  console.log("-- list "  + "!".trim());
+  console.log("-- check & uncheck " + "!".trim());
 }
 
 // The following line starts the application
