@@ -59,15 +59,20 @@ function onDataReceived(text) {
   else if (text.trim().slice(0,6) === 'remove') {
     remove(text);
   }
-  else if(text.trim() === 'check')
+  else if(text.trim() === 'done')
   {
-    check(text);
+    list2(text);
   }
 
 else if(input[0] === 'edit' || text === 'edit\n'){
   edit(input, text);
 }
-
+else if(text === 'check\n' || input[0]=="check"){
+  check(text,input );
+}
+else if(text === 'uncheck\n' || input[0]=="uncheck"){
+  uncheck(text,input );
+}
 }
 
 /**
@@ -137,11 +142,11 @@ function add(text,length){
 */
 var s = ['hello\n','help\n','exit or quit\n'];
 
-var object = [{
+var objects = [{
 
 
       task:'Hello',
-    done: true},
+    done: false},
 
   
   { task: 'help',
@@ -151,7 +156,7 @@ var object = [{
 
   
     {task: 'exit',
-  done: true
+  done: false
 
 }]
 
@@ -193,20 +198,99 @@ else{
 
 }
 /*
-*Check 
+*list
 */
-function check(){
+function list2(text){
+ 
+      
+  for(var i = 0; i<objects.length; i++){
+  
+    if(objects[i].done === true){
+      console.log((i+1) +". [✓] "+objects[i].task + "  "+ objects[i].done)
 
-  for(var i = 0; i<object.length; i++){
-   //console.log(object[i]);
-    if(object[i].done === true){
-      console.log("[✓] "+object[i].task);
     }else{
-      console.log("[ ] "+object[i].task);
+      console.log( (i+1) +". [ ] "+objects[i].task+ "  "+ objects[i].done)
     }
 
   }
 }
+
+/*
+*Check and uncheck
+*/
+
+function check(text,input){
+  if(text === 'check\n'){
+    console.log('error')
+  }  
+  else if(input[0]==='check' && !isNaN(input[1])){
+    
+       if(objects[input[1]-1].done===false){
+         
+           objects[input[1]-1].done= true
+         list2(text) ;
+     }}}
+ 
+     function uncheck(text,input){
+      if(text === 'uncheck\n'){
+        console.log('error')
+      }  
+      else if(input[0]==='uncheck' && !isNaN(input[1])){
+        
+           if(objects[input[1]-1].done===true){
+             
+               objects[input[1]-1].done= false
+             list2(text) ;
+         }}}
+
+//    var whichTaskToEdit = input[1];
+ 
+// function check(text,input){
+//   if(text === 'check\n'){
+//     console.log('error')
+//   }  
+//   else if(input[0]==='check' && !isNaN(input[1])){
+//        if(object[input[1]-1].done== false){
+//            object[input[1]-1].done= true
+//            object(text);
+//      }}
+//  else{
+ 
+//    var whichTaskToEdit = input[1];
+ 
+//    input.shift();
+// function check(text,input){
+//   if(text === 'check\n'){
+//     console.log('error')
+//   }  
+//   else if(input[0]==='check' && !isNaN(input[1])){
+//        if(object[input[1]-1].done== false){
+//            object[input[1]-1].done= true
+//            object(text);
+//      }}
+//  else{
+ 
+//    var whichTaskToEdit = input[1];
+ 
+//    input.shift();
+//    input.shift();
+ 
+//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
+//  }
+ 
+//    input.shift();
+ 
+//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
+//  }
+ 
+//    input.shift();
+//    input.shift();
+ 
+//    objectsplice(whichTaskToEdit-1,1,input.join(" ").replace("\n", ""))
+//  }
+// }
+
+
 
 ///////////////////////////
 // list all possible commands exists in code below.
