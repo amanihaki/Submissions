@@ -59,10 +59,15 @@ function onDataReceived(text) {
   else if (text.trim().slice(0,6) === 'remove') {
     remove(text);
   }
+  else if(text.trim() === 'check')
+  {
+    check(text);
+  }
 
 else if(input[0] === 'edit' || text === 'edit\n'){
   edit(input, text);
 }
+
 }
 
 /**
@@ -132,21 +137,23 @@ function add(text,length){
 */
 var s = ['hello\n','help\n','exit or quit\n'];
 
-var objet = [{
+var object = [{
 
 
-   task1:'Hello',
-    done : true},
-    
-  {task2: 'help',
-  done : false
+      task:'Hello',
+    done: true},
 
- },
+  
+  { task: 'help',
+  done: false}
 
-  {task3: 'exit',
+ ,
+
+  
+    {task: 'exit',
   done: true
 
-},]
+}]
 
 function remove(n){
   var number = n.charAt(7);
@@ -185,8 +192,21 @@ else{
 }
 
 }
+/*
+*Check 
+*/
+function check(){
 
+  for(var i = 0; i<object.length; i++){
+   //console.log(object[i]);
+    if(object[i].done === true){
+      console.log("[✓] "+object[i].task);
+    }else{
+      console.log("[ ] "+object[i].task);
+    }
 
+  }
+}
 
 ///////////////////////////
 // list all possible commands exists in code below.
