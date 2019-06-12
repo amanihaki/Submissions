@@ -87,7 +87,22 @@ app.get('/movies/read/by-date', function (req, res) {
    res.send({status:200, data:movies.sort((a,b) => a.title.localeCompare(b.title))});
    }) ; 
  
-  
+   app.get('/movies/read/id/:ID', function (req, res) {
+    var id = req.params.ID
+    for(var i=0; i<=movies.length-1; i++){
+    if(id == i+1){
+      res.send({status:200, data:movies[i]})
+      
+    }
+    
+  }
+ 
+    
+    res.send({status:404, error:true, message:'the movie <ID> does not exist'})
+    
+
+   }) ; 
+ 
 
 app.get('/movies/update', function (req, res) {
  
