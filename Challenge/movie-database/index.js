@@ -67,6 +67,27 @@ app.get('/movies/read', function (req, res) {
 res.send({status:200, data:movies})
 }) ;
 
+app.get('/movies/read/by-date', function (req, res) {
+   movies.sort(function(a,b){
+   return  a.year - b.year
+   });
+
+  res.send({status:200, data:movies})
+  }) ; 
+
+
+  app.get('/movies/read/by-rating', function (req, res) {
+    movies.sort(function(a,b){
+      return  b.rating - a.rating});
+   res.send({status:200, data:movies})
+   }) ; 
+   
+   app.get('/movies/read/by-title', function (req, res) {
+    movies.sort();
+   res.send({status:200, data:movies.sort((a,b) => a.title.localeCompare(b.title))});
+   }) ; 
+ 
+  
 
 app.get('/movies/update', function (req, res) {
  
