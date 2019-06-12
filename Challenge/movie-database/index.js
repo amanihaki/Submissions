@@ -46,10 +46,29 @@ else{
  
 
 
+const movies = [
+  { title: 'Jaws', year: 1975, rating: 8 },
+  { title: 'Avatar', year: 2009, rating: 7.8 },
+  { title: 'Brazil', year: 1985, rating: 8 },
+  { title: 'الإرهاب والكباب‎', year: 1992, rating: 6.2 }
+]
 
-// const express = require('express');
-// var app = express();
-// app.get('/', (req, res) => {
-//     res.send('OK')
-// });
-// app.listen(process.env.PORT || 3000)
+
+
+
+app.get('/movies/creat', function (req, res) {
+  
+res.send({status:200, data:MOVIES})
+}) ;
+
+
+app.get('/movies/read', function (req, res) {
+ 
+res.send({status:200, data:movies})
+}) ;
+
+
+app.get('/movies/update', function (req, res) {
+ 
+res.send({Anthing})
+}) ;
