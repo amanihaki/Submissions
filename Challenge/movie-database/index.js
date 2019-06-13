@@ -102,9 +102,26 @@ app.get('/movies/read/by-date', function (req, res) {
     
 
    }) ; 
+
+
+   app.get('/movies/add', function (req, res) {
+    var a = req.query.title
+    var b = req.query.year
+    var c = req.query.rating
+
+   if(a == undefined || b == undefined || b.length != 4 || b == isNaN(b)){
+    res.send({status:403, error:true, message:'you cannot create a movie without providing a title and a year'})
+   }
+   if(c == undefined || c == ""){
+     c = 4;
+   }
+   movies.push({title : a, year: b, rating : c});
+   res.send({data:movies})
+   }) ; 
  
 
 app.get('/movies/update', function (req, res) {
  
 res.send({Anthing})
 }) ;
+    
