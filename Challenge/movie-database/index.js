@@ -1,7 +1,23 @@
 const express = require('express');
 const port = 3000;
-const app = express();
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+const url = process.env.MONGOLAB_URI;
+mongoose.Promise = global.Promise;
+mongoose.connect(url);
 
+ MONGOLAB_URI='mongodb+srv://amani_sy:70215352qwer-@cluster0-gk420.mongodb.net/test?retryWrites=true&w=majority'
+
+const app = express();
+const moviesschema = new mongoose.Schema({
+  title: String,
+  year: Number,
+  rating: Number
+  });
+  const movies = mongoose.model("Movies", moviesschema);
+
+//'mongodb+srv://amani_sy:<password>@cluster0-gk420.mongodb.net/test?retryWrites=true&w=majority'
 //app.use(express.static(__dirname + '/public'));
 app.listen(port, function () {
   console.log("Server is running on "+ port +" port");
@@ -56,7 +72,7 @@ const movies = [
 
 
 
-app.get('/movies/creat', function (req, res) {
+app.post('/movies/creat', function (req, res) {
   
 res.send({status:200, data:MOVIES})
 }) ;
@@ -121,7 +137,7 @@ app.get('/movies/read/by-date', function (req, res) {
  
 
 
-app.get('/movies/delete/:ID', function (req, res) {
+app.delete('/movies/delete/:ID', function (req, res) {
  
   var id = req.params.ID
     for(var i=0; i<=movies.length-1; i++){
@@ -151,7 +167,7 @@ app.get('/movies/delete/:ID', function (req, res) {
 // }
 // }) ;
     
-app.get('/movies/update/:ID', function (req, res) {
+app.put('/movies/update/:ID', function (req, res) {
   var a = req.query.title;
   var b = req.query.rating;
   var c = req.query.year;
