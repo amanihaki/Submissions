@@ -96,6 +96,8 @@ img{
   
 
      .skill[data-skill="9"]{
+
+       
        width:130px;
        background-color:  rgb(100, 121, 216);
        border-right: 7px solid white;
@@ -104,7 +106,6 @@ img{
        margin-right: -4px;
        padding-left:9px;
        padding-top:9px;
-
      } 
      .skill[data-skill="7"]{
         width:128px;
@@ -148,7 +149,8 @@ img{
        border-right: 2px solid   rgb(100, 121, 216);
        padding-left:9px;
        padding-top:9px;
-       margin-left:15px
+       margin-left:15px;
+       
     } 
 
        .skills-primary{
@@ -159,12 +161,7 @@ img{
          padding-left: 8px;
          padding-top: 8px;
         
-      /* padding-top:9px;
-       /* height: 35px;*/
-      /* margin-left:16px;
-       margin-right:5px;
-       /*padding-left: 8px;
-       padding-top: 12px;*/
+     
      } 
      .skill[data-skill="1"]{
         margin-top:-6px;
@@ -175,39 +172,33 @@ img{
        padding-top:14px;
        margin-left: 3px;
        content: "\2605";
-       /* height: 35px;
        
-        padding-left: 8px;
-        padding-top: 12px;*/
      } 
-/*
-     .skill > span:after{
-         content: "\2605";
-     }
-*/
+
 .skill[data-skill="1"]::after{
-content:"\2605";
+content:"\2605 ";
 color: white;
 padding-left:20px;
 } 
 .skill[data-skill="5"]::after{
-    content:"\2605";
-     position: absolute;
-    color: white;
+    content:"\2605  \2605 \2605 ";
+     color: white;
     padding-left:10px;
-    left:400px
+    
     }
     
     .skill[data-skill="9"]::after{
-        content:"\2605";
+        content:"\2605 \2605 \2605 \2605 \2605";;
         color: white;
         padding-left:10px;
-        }.skill[data-skill="3"]::after{
-            content:"\2605";
+        }
+        .skill[data-skill="3"]::after{
+            content:" \2605 \2605 ";
             color: white;
             padding-left:10px;
             }.skill[data-skill="7"]::after{
-                content:"\2605";
+            content:" \2605  \2605 \2605 \2605  ";
+            
                 color: white;
                 padding-left:10px;
                 } 
@@ -217,7 +208,7 @@ padding-left:20px;
 
     .experience{
         margin-left: 150px;
-        /*border-left:2px solid black;*/
+       
     } 
     .experience-details{
         margin-left: 670px;
@@ -233,11 +224,9 @@ padding-left:20px;
      } 
      #hobbies ul{
          margin-left: 150px;
-     /* border-left:2px solid black;*/
+     
      } 
-     /*#competencies:before{
-        border-left:2px solid black;
-     } */h3{
+     h3{
          font-style: italic;
      }  
       
@@ -273,7 +262,7 @@ padding-left:20px;
   @media(max-width:600px){
 
   
-
+   
   h1{ 
     position: absolute;
     top: 40px;
@@ -293,11 +282,9 @@ padding-left:20px;
     position: absolute;
     top:300px;
      left: 20px;
-    border-bottom:2px solid black;
+    
     
 }
-
-
  h2{
     visibility: hidden;
 }  
@@ -346,8 +333,7 @@ img{
      
     #hobbies{
     grid-area: bo;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    
     } 
     
     .skills-primary{ 
@@ -368,18 +354,7 @@ img{
     .skills-secondary::before{
         border: red solid 1px;
     }
-   /* #competencies{
-        margin-top:100px;}
-*/
-
-/*#experiences h3{
-    border-bottom: black solid 2px;
-    
-}*/
-
-
-  
-#experiences {
+   #experiences {
     margin-left: -100px;
     margin-top: 100px;
 } 
@@ -397,57 +372,41 @@ img{
    color:rgb(100, 121, 216);
 
  } 
- #hobbies {
+
+
+ 
+    #hobbies {
      display: none;
-    }
+    } 
     #education{
       margin-left:-100px;  
       margin-top: 80px;
+      margin-bottom: -280px;
     }
-    /*
-    #hobbies::after{
-        display: none;
-    } 
-    #hobbies::before{
-        display: none;
-    } 
-    #education::after{
-        display: none;
-    }
-    #experiences::after{
-        display: none;
-    }*/
+   
     h3{
         border-bottom: 2px solid black;
-    } 
+     
+    }  
     #hobbies::before{
-        content: url(phone.png);
-    left: 500px;
-    position: absolute;
-    top: 1400px;
-
+     
     display: none;
+   
     }
     #hobbies::after{
     
-       content: url(email.png);
-        margin-left: 200px;
+    
         display: none;
     }
         
   #education::after{
-    content: url(github.png);
-    left: 630px;
-    position: absolute;
-    top: 1400px;
+    
     display: none;
+
    }
    #experiences::after{
-    content: url(facebook.png);
-   left: 750px;
-    position: absolute;
-   top: 1400px;
+   
    display: none;
-    
    }
- }
+   
+      }

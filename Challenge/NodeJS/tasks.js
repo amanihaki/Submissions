@@ -1,7 +1,10 @@
 
 /**
  * Starts the application
- * This is the function that is run when the app starts
+ * This is the function that is run when the app starts	
+￼
+HTMLCSSJAVASCRIPTSQLPHPBOOTSTRAPHOW TOPYTHONMORE XEXERCISES REFERENCES 
+
  * 
  * It prints a welcome line, and then a line with "----",
  * then nothing.
@@ -59,12 +62,13 @@ const storeData = (data, path) => {
 
 function onDataReceived(text) {
   var l = text.length;
+  var splittingText = text.trim().split(" ");
   var input = text.split(" ");
  if (text === 'quit\n' || text === 'exit\n' ){
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(splittingText[0] === 'hello' || text == 'hello\n'){
+    hello(splittingText);
   }
   else if(text === 'help\n')
   {
@@ -116,12 +120,9 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(text){
-  console.log('hello' + "!" .trim());
-  
-}
-function tex(text){
-  console.log(text);
-  
+  // var tex=text.trim();
+  console.log(text.join().replace('\n' , '').replace(',' , ' ') + "!")
+
 }
 
 /**
@@ -136,6 +137,18 @@ function quit(){
 
 }
 
+/*
+***Help
+*
+*
+***/
+
+function help(text){
+  console.log("-- hello [welcome message]" + "!".trim());
+  console.log("-- quit OR exit [exit from app]"+ "!".trim());
+  console.log("-- list"+ "!".trim());
+  console.log("-- check & uncheck" + "!".trim());
+}
 
 /*
 *List
@@ -272,12 +285,7 @@ function check(text,input){
 // list all possible commands exists in code below.
 // will list hello & quit .
 ///////////////////////////
-function help(){
-  console.log("-- hello [welcome message]" + "!".trim());
-  console.log("-- quit OR exit [exit from app]"+ "!".trim());
-  console.log("-- list "  + "!".trim());
-  console.log("-- check & uncheck " + "!".trim());
-}
+
 
 // The following line starts the application
 startApp("Amani")
